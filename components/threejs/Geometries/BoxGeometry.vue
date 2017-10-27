@@ -4,7 +4,7 @@
 
 <script>
 import { BoxGeometry } from 'three'
-import Geometry from './Geometry'
+import Geometry from '../Core/Geometry'
 
 export default {
   extends: Geometry,
