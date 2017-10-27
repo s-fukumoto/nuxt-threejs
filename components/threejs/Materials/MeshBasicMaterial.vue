@@ -10,7 +10,6 @@
 </template>
 
 <script>
-// import { MeshBasicMaterial, Color, Combine, MultiplyOperation } from 'three'
 import { MeshBasicMaterial, Color, MultiplyOperation } from 'three'
 import Material from './Material'
 

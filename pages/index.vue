@@ -1,7 +1,7 @@
 <template>
   <section class="container">
+    <Background/>
     <div>
-      <Background/>
       <logo/>
       <h1 class="title">
         nuxt-threejs
@@ -19,7 +19,7 @@
 
 <script>
 import Logo from '~/components/Logo.vue'
-import Background from '~/components/Background.vue'
+import Background from '~/components/BackgroundCube.vue'
 
 export default {
   components: {

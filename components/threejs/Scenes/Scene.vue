@@ -1,12 +1,13 @@
 <template>
   <div>
+    <slot name="light"></slot>
     <slot name="object"></slot>
   </div>
 </template>
 
 <script>
 import { Scene } from 'three'
-import Object3D from './Object3D'
+import Object3D from '../Core/Object3D'
 
 export default {
   extends: Object3D,

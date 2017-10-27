@@ -1,5 +1,5 @@
 <template>
-  <canvas>
+  <canvas :style="styleCanvas">
     <slot name="camera"></slot>
     <slot name="scene"></slot>
   </canvas>
@@ -10,7 +10,7 @@ import { WebGLRenderer } from 'three'
 
 export default {
   props: {
-    canvas: this.background ? this.backgroundCanvas() : HTMLElement,
+    canvas: HTMLElement,
     context: WebGLRenderingContext,
     percision: {
       type: String,
@@ -46,7 +46,7 @@ export default {
     },
     width: Number,
     height: Number,
-    background: true
+    styleCanvas: {}
   },
   data () {
     return {
@@ -70,13 +70,6 @@ export default {
     },
     resize () {
       this.renderer.setSize(this.width, this.height)
-    },
-    backgroundCanvas () {
-      return {
-        getContext: document.getCSSCanvasContext('experimental-webgl', 'webgl-bg', this.width, this.height),
-        width: this.width,
-        height: this.height
-      }
     }
   },
   mounted () {
@@ -99,3 +92,10 @@ export default {
   }
 }
 </script>
+
+<style>
+#webgl-bg {
+  z-index: -1;
+  position: absolute;
+}
+</style>
