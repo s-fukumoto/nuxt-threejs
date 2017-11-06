@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-    <Background/>
+    <background-cube/>
     <div>
       <logo/>
       <h1 class="title">
@@ -19,20 +19,13 @@
 
 <script>
 import Logo from '~/components/Logo.vue'
-import Background from '~/components/BackgroundCube.vue'
+import BackgroundCube from '~/components/BackgroundCube.vue'
 
 export default {
   components: {
     Logo,
-    Background
-  } // ,
-  /*
-  data () {
-    return {
-      Background: require('~/components/Background.vue')
-    }
+    BackgroundCube
   }
-  */
 }
 </script>
 
